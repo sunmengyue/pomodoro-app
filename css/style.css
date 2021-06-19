@@ -15,7 +15,7 @@ body {
 
 .container {
   display: flex;
-  height: 80%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -59,27 +59,75 @@ nav > .active {
 
 .clock {
   margin-top: 20px;
-  background-color: #161a40;
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
+
   font-size: 3.7rem;
 }
 
 .clock > .outer_circle {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  border-radius: 50%;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
 }
-
 .outer_circle > .inner_circle {
-  padding: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background-color: #121530;
+  border-radius: 50%;
 }
 
-.inner_circle > h2 {
+#ring {
+  position: relative;
+  align-self: center;
+  width: 470px;
+  height: 470px;
+}
+
+#ring > circle {
+  fill: transparent;
+  stroke: #f97070;
+  stroke-width: 10;
+  stroke-dasharray: 800;
+  stroke-linecap: round;
+}
+
+.inner_circle h4 {
   letter-spacing: 10px;
   text-transform: uppercase;
   font-size: 1.2rem;
   margin-top: 40px;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+}
+
+i {
+  margin-top: 50px;
+  color: rgba(240, 240, 240, 0.5);
+}
+
+/* Modal */
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 60%;
+  height: 70%;
+  margin: 10% auto;
+  border-radius: 30px;
+  color: black;
+}
+
+.hide {
+  display: none;
 }

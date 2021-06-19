@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="container">
@@ -18,12 +25,74 @@
       <div class="clock">
         <div class="outer_circle">
           <div class="inner_circle">
-            <h1>17:59</h1>
-            <h2>pause</h2>
+            <svg id="ring">
+              <circle r="200" cx="50%" cy="50%"></circle>
+            </svg>
+            <div class="text">
+              <h1>17:59</h1>
+              <h4>pause</h4>
+            </div>
           </div>
         </div>
       </div>
-      <div class="settings"></div>
+      <div class="settings">
+        <i class="fas fa-cog fa-3x"></i>
+      </div>
+    </div>
+    <!-- MODAL -->
+    <div class="modal hide">
+      <div class="modal__header">
+        <h2>Settings</h2>
+        <h3>✕</h3>
+      </div>
+      <!-- Adjust modal time -->
+      <div class="modal__mimutes">
+        <div class="modal__timer">
+          <h5>pomodoro</h5>
+          <div class="timer">
+            <h5>25</h5>
+            <div class="adjust">
+              <h5>⌃</h5>
+              <h5>⌄</h5>
+            </div>
+          </div>
+        </div>
+        <div class="modal__timer">
+          <h5>short break</h5>
+          <div class="timer">
+            <h5>5</h5>
+            <div class="adjust">
+              <h5>⌃</h5>
+              <h5>⌄</h5>
+            </div>
+          </div>
+        </div>
+        <div class="modal__timer">
+          <h5>long break</h5>
+          <div class="timer">
+            <h5>15</h5>
+            <div class="adjust">
+              <h5>⌃</h5>
+              <h5>⌄</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal font -->
+      <div class="modal__font">
+        <h2>Font</h2>
+        <div>Aa</div>
+        <div>Aa</div>
+        <div>Aa</div>
+      </div>
+      <!-- modal color  -->
+      <div class="modal__color">
+        <h2>Color</h2>
+        <div id="red"></div>
+        <div id="blue"></div>
+        <div id="purple"></div>
+      </div>
+      <button>Apply</button>
     </div>
   </body>
 </html>

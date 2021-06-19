@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>pomodoro</h2>
+      <!-- nav -->
+      <nav class="nav">
+        <ul>
+          <li onclick="timer.select('pomodoro')">pomodoro</li>
+          <li onclick="timer.select('shortbreak')">short break</li>
+          <li onclick="timer.select('longbreak')">long break</li>
+        </ul>
+        <!-- indicator  -->
+        <div id="indicator"></div>
+      </nav>
+      <!-- timer -->
+      <section id="timer" class="center">
+        <div id="outercircle">
+          <div id="innercircle">
+            <svg id="ring">
+              <circle r="163" cx="50%" cy="50%" />
+            </svg>
+          </div>
+          <div id="textcontainer">
+            <h1 id="clock">17:59</h1>
+            <!-- <h5 onclick="timer.stop()">Pause</h5> -->
+            <h5 onclick="timer.start()">Start</h5>
+            <!-- <h5 onclick="timer.reset()">reset</h5> -->
+          </div>
+        </div>
+      </section>
+      <!-- Setting -->
+      <i class="fas fa-cog fa-3x"></i>
+    </div>
+    <script src="/js/timer.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/setting.js"></script>
+    <script>
+      let timer = new Timer();
+    </script>
+  </body>
+</html>

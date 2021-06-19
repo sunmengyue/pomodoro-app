@@ -40,7 +40,9 @@ class Timer {
     this.interval = setInterval(() => {
       timeLeft--;
       this.clock.innerText = timeLeft;
-      if (timeLeft <= 0) clearInterval(this.interval);
+      if (timeLeft <= 0) {
+        clearInterval(this.interval);
+      }
     }, 1000);
   }
 

@@ -20,9 +20,15 @@
       <!-- nav -->
       <nav class="nav">
         <ul>
-          <li onclick="timer.select('pomodoro')">pomodoro</li>
-          <li onclick="timer.select('shortbreak')">short break</li>
-          <li onclick="timer.select('longbreak')">long break</li>
+          <li onclick="timer.select('pomodoro')" class="pointer active">
+            pomodoro
+          </li>
+          <li onclick="timer.select('shortbreak')" class="pointer">
+            short break
+          </li>
+          <li onclick="timer.select('longbreak')" class="pointer">
+            long break
+          </li>
         </ul>
         <!-- indicator  -->
         <div id="indicator"></div>
@@ -36,15 +42,17 @@
             </svg>
           </div>
           <div id="textcontainer">
-            <h1 id="clock">17:59</h1>
+            <h1 id="time">00:00</h1>
             <!-- <h5 onclick="timer.stop()">Pause</h5> -->
-            <h5 onclick="timer.start()">Start</h5>
+            <h5 id="action" onclick="action(this.innerText)" class="pointer">
+              Start
+            </h5>
             <!-- <h5 onclick="timer.reset()">reset</h5> -->
           </div>
         </div>
       </section>
       <!-- Setting -->
-      <i class="fas fa-cog fa-3x"></i>
+      <i class="fas fa-cog fa-3 fa-2x"></i>
     </div>
     <script src="/js/timer.js"></script>
     <script src="/js/index.js"></script>

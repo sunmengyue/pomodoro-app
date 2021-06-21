@@ -12,6 +12,7 @@ class Timer {
     this.circle = document.querySelector('#ring > circle');
     this.interval = 0;
     this.clock = document.getElementById('clock');
+    this.control = document.getElementById('control');
   }
 
   stop() {
@@ -40,9 +41,8 @@ class Timer {
     this.interval = setInterval(() => {
       timeLeft--;
       this.clock.innerText = timeLeft;
-      if (timeLeft <= 0) {
-        clearInterval(this.interval);
-      }
+      this.control.innerText = 'stop';
+      if (timeLeft <= 0) clearInterval(this.interval);
     }, 1000);
   }
 

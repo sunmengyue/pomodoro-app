@@ -1,58 +1,47 @@
 class Timer {
-  constructor(type = 'pomodoro') {
+  constructor(type) {
     this.type = type;
     this.pomodoro = 25;
-    this.shortBreak = 5;
+    this.shortBreak= 5;
     this.longBreak = 15;
-    this.timeElement = window[type];
-    this.clock = document.getElementById('time');
-    this.actionElement = document.getElementById('action');
-    this.time = this.timeElement;
-    this.text = this.time <= 9 ? `0${this.time}` : `${this.time}`;
-    this.circle = document.querySelector('#ring > circle');
-    this.interval = 0;
-    this.clock = document.getElementById('clock');
-  }
-
-  stop() {
-    clearInterval(this.interval);
+    this.time = document.getElementById('time');
+    this.action = document.getElementById('control');
   }
 
   select(type) {
     this.type = type;
-    switch (type) {
-      case 'shortbreak':
-        return (this.clock.innerText = 5);
-      case 'longbreak':
-        return (this.clock.innerText = 15);
-      default:
-        return (this.clock.innerText = 25);
-    }
+    this.reset();
   }
 
   start() {
-    let timeLeft = this.pomodoro;
-    if (this.type == 'shortbreak') {
-      timeLeft = this.shortBreak;
-    } else if (this.type == 'longbreak') {
-      timeLeft = this.longBreak;
-    }
+    this.action.innerText = 'stop'.toUpperCase();
+    let overallSeconds = this[this.type] * 60;
+
     this.interval = setInterval(() => {
-      timeLeft--;
-      this.clock.innerText = timeLeft;
-      if (timeLeft <= 0) clearInterval(this.interval);
-    }, 1000);
+      let minutes = Math.floor(overallSeconds / 60);
+      let seconds = overallSeconds % 60;
+      seconds = seconds < 10 ? `0${seconds}` : seconds;
+      this.time.innerText = `${minutes}:${seconds}`
+      overallSeconds--;
+
+      if (overallSeconds < 0) {
+        clearInterval(this.interval);
+      }
+    }, 1000)
+  }
+
+  stop() {
+    clearInterval(this.interval);
+    this.action.innerText = 'start'.toUpperCase();
   }
 
   reset() {
-    this.stop();
-    switch (this.type) {
-      case 'shortbreak':
-        return (this.clock.innerText = 5);
-      case 'longbreak':
-        return (this.clock.innerText = 15);
-      default:
-        return (this.clock.innerText = 25);
-    }
+    this.time.innerText = `${this[this.type]}:00`;
+    // 2. clock timer text change
+
+    // 3. action text change
+
+    // 4. red ring disappeared
   }
 }
+

@@ -119,8 +119,8 @@ body {
   fill: transparent;
   stroke: var(--orange);
   stroke-width: 10;
-  stroke-dasharray: 1024, 1024;
-  stroke-dashoffset: 0;
+  stroke-dasharray: 1024;
+  stroke-dashoffset: 1024;
   stroke-linecap: round;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;

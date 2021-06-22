@@ -108,8 +108,10 @@ nav > .active {
   stroke: #f97070;
   stroke-width: 10;
   stroke-dasharray: 1260;
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 1260;
   stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
 
 .text {

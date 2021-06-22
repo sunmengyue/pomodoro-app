@@ -111,6 +111,10 @@ body {
   font-size: 45px;
 }
 
+#textcontainer > h1 {
+  margin-bottom: 30px;
+}
+
 #action {
   font-size: 30px;
 }

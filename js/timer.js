@@ -66,13 +66,5 @@ class Timer {
     this.text = this.time <= 9 ? `0${this.time}` : `${this.time}`;
     this.actionElement.innerText = "start";
     this.clock.innerText = `${this.text}:00`;
-    // switch (this.type) {
-    //   case 'shortbreak':
-    //     return (this.clock.innerText = 5);
-    //   case 'longbreak':
-    //     return (this.clock.innerText = 15);
-    //   default:
-    //     return (this.clock.innerText = 25);
-    // }
   }
 }

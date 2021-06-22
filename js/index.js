@@ -21,8 +21,7 @@ navLinks.forEach((navItem, i) => {
         navLinks.forEach((link) => {
             link.classList.remove('active');
             navBg.style.marginLeft = `calc(calc(100% / 3) * ${i})`
-            navItem.classList.add('active');
-            
+            navItem.classList.add('active'); 
         })
     })
 });

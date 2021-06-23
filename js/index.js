@@ -11,3 +11,18 @@ const control = (action) => {
       break;
   }
 };
+
+const navLinks = document.querySelectorAll('nav div');
+
+for (let link of navLinks) {
+  link.addEventListener('click', (e) => {
+    toggleActiveLink(e.currentTarget);
+  });
+}
+
+function toggleActiveLink(targetLink) {
+  for (let link of navLinks) {
+    link.classList.remove('active');
+  }
+  targetLink.classList.add('active');
+}

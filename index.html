@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container hide">
       <h2 class="title">Pomodoro</h2>
       <nav>
         <div class="active" onclick="timer.select('pomodoro')">pomodoro</div>
@@ -40,59 +40,66 @@
       </div>
     </div>
     <!-- MODAL -->
-    <div class="modal hide">
+    <div class="modal">
       <div class="modal__header">
-        <h2>Settings</h2>
+        <h1>Settings</h1>
         <h3>✕</h3>
       </div>
       <!-- Adjust modal time -->
-      <div class="modal__mimutes">
-        <div class="modal__timer">
-          <h5>pomodoro</h5>
-          <div class="timer">
-            <h5>25</h5>
-            <div class="adjust">
-              <h5>⌃</h5>
-              <h5>⌄</h5>
+      <div class="modal__time">
+        <h3>Time (Minutes)</h3>
+        <div class="modal__mimutes">
+          <div class="modal__timer">
+            <h5>pomodoro</h5>
+            <div class="timer">
+              <h4>25</h4>
+              <div class="adjust">
+                <i class="fas fa-angle-up"></i>
+                <i class="fas fa-angle-down"></i>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal__timer">
-          <h5>short break</h5>
-          <div class="timer">
-            <h5>5</h5>
-            <div class="adjust">
-              <h5>⌃</h5>
-              <h5>⌄</h5>
+          <div class="modal__timer">
+            <h5>short break</h5>
+            <div class="timer">
+              <h4>5</h4>
+              <div class="adjust">
+                <i class="fas fa-angle-up"></i>
+                <i class="fas fa-angle-down"></i>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal__timer">
-          <h5>long break</h5>
-          <div class="timer">
-            <h5>15</h5>
-            <div class="adjust">
-              <h5>⌃</h5>
-              <h5>⌄</h5>
+          <div class="modal__timer">
+            <h5>long break</h5>
+            <div class="timer">
+              <h4>15</h4>
+              <div class="adjust">
+                <i class="fas fa-angle-up"></i>
+                <i class="fas fa-angle-down"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- modal font -->
-      <div class="modal__font">
+      <div class="modal__font__color" id="font__container">
         <h2>Font</h2>
-        <div>Aa</div>
-        <div>Aa</div>
-        <div>Aa</div>
+        <div class="font">
+          <div>Aa</div>
+          <div>Aa</div>
+          <div>Aa</div>
+        </div>
       </div>
       <!-- modal color  -->
-      <div class="modal__color">
+      <div class="modal__font__color" id="color__container">
         <h2>Color</h2>
-        <div id="red"></div>
-        <div id="blue"></div>
-        <div id="purple"></div>
+        <div class="color">
+          <div id="red"><i class="fas fa-check"></i></div>
+          <div id="blue"></div>
+          <div id="purple"></div>
+        </div>
       </div>
-      <button>Apply</button>
+      <button id="apply">Apply</button>
     </div>
 
     <script src="js/timer.js"></script>

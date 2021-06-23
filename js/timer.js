@@ -7,7 +7,6 @@ class Timer {
     this.time = document.getElementById('time');
     this.action = document.getElementById('control');
     this.circle = document.getElementById('circle');
-    this.circumference = 2 * Math.PI * this.circle.r.baseVal.value;
   }
 
   select(type) {
@@ -31,8 +30,7 @@ class Timer {
       overallSeconds--;
 
       // increase the orange ring from none to a circle
-      this.circle.style.strokeDashoffset =
-        (overallSeconds * this.circumference) / startTime;
+      this.circle.style.strokeDashoffset = (overallSeconds * 1257) / startTime;
 
       if (overallSeconds <= 0) {
         clearInterval(this.interval);
@@ -50,6 +48,6 @@ class Timer {
     this.stop();
     this.time.innerText = `${this[this.type]}:00`;
     this.action.innerText = 'start'.toUpperCase();
-    this.circle.style.strokeDashoffset = this.circumference;
+    this.circle.style.strokeDashoffset = 1257;
   }
 }

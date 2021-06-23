@@ -18,8 +18,12 @@
     <div class="container">
       <h2 class="title">Pomodoro</h2>
       <nav>
-        <div class="active" id="pomodoro" onclick="timer.select('pomodoro')">pomodoro</div>
-        <div id="shortBreak" onclick="timer.select('shortBreak')">short break</div>
+        <div class="active" id="pomodoro" onclick="timer.select('pomodoro')">
+          pomodoro
+        </div>
+        <div id="shortBreak" onclick="timer.select('shortBreak')">
+          short break
+        </div>
         <div id="longBreak" onclick="timer.select('longBreak')">long break</div>
       </nav>
       <div class="clock">
@@ -30,7 +34,7 @@
             </svg>
             <div class="text">
               <h1 id="time"></h1>
-              <h4 id="control" onclick="timer.start()">start</h4>
+              <h4 id="control" onclick="control(this.innerText)"></h4>
             </div>
           </div>
         </div>
@@ -94,10 +98,9 @@
       </div>
       <button>Apply</button>
     </div>
-    
+
     <script src="js/timer.js"></script>
     <script src="js/setting.js"></script>
     <script src="js/index.js"></script>
-
   </body>
 </html>

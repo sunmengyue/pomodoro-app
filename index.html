@@ -52,7 +52,7 @@
           <div class="modal__timer">
             <label for="pomodoro">pomodoro</label>
             <div class="timer">
-              <input type="text" placeholder="25" id="pomodoro" value="25" />
+              <input type="text" id="pomodoro" value="25" />
               <div class="adjust">
                 <i class="fas fa-angle-up"></i>
                 <i class="fas fa-angle-down"></i>
@@ -62,7 +62,7 @@
           <div class="modal__timer">
             <label for="short__break">short break</label>
             <div class="timer">
-              <input type="text" placeholder="5" id="short__break" value="5" />
+              <input type="text" id="short__break" value="5" />
               <div class="adjust">
                 <i class="fas fa-angle-up"></i>
                 <i class="fas fa-angle-down"></i>
@@ -72,7 +72,7 @@
           <div class="modal__timer">
             <label for="long__break">long break</label>
             <div class="timer">
-              <input type="text" placeholder="15" id="long__break" value="15" />
+              <input type="text" id="long__break" value="15" />
               <div class="adjust">
                 <i class="fas fa-angle-up"></i>
                 <i class="fas fa-angle-down"></i>
@@ -85,18 +85,20 @@
       <div class="modal__font__color" id="font__container">
         <h2>Font</h2>
         <div class="font">
-          <div id="kumbh">Aa</div>
-          <div id="roboto-slab">Aa</div>
-          <div dir="space-mono">Aa</div>
+          <button type="button" id="kumbh">Aa</button>
+          <button type="button" id="roboto-slab">Aa</button>
+          <button type="button" id="space-mono">Aa</button>
         </div>
       </div>
       <!-- modal color  -->
       <div class="modal__font__color" id="color__container">
         <h2>Color</h2>
         <div class="color">
-          <div id="orange"><i class="fas fa-check"></i></div>
-          <div id="cyan"></div>
-          <div id="purple"></div>
+          <button type="button" id="orange">
+            <i class="fas fa-check"></i>
+          </button>
+          <button type="button" id="cyan"></button>
+          <button type="button" id="purple"></button>
         </div>
       </div>
       <button id="apply">Apply</button>

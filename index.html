@@ -43,16 +43,16 @@
     <div class="modal">
       <div class="modal__header">
         <h1>Settings</h1>
-        <h3>✕</h3>
+        <h3 id="close">✕</h3>
       </div>
       <!-- Adjust modal time -->
-      <div class="modal__time">
+      <form class="modal__time">
         <h3>Time (Minutes)</h3>
         <div class="modal__mimutes">
           <div class="modal__timer">
-            <h5>pomodoro</h5>
+            <label for="pomodoro">pomodoro</label>
             <div class="timer">
-              <h4>25</h4>
+              <input type="text" placeholder="25" id="pomodoro" value="25" />
               <div class="adjust">
                 <i class="fas fa-angle-up"></i>
                 <i class="fas fa-angle-down"></i>
@@ -60,9 +60,9 @@
             </div>
           </div>
           <div class="modal__timer">
-            <h5>short break</h5>
+            <label for="short__break">short break</label>
             <div class="timer">
-              <h4>5</h4>
+              <input type="text" placeholder="5" id="short__break" value="5" />
               <div class="adjust">
                 <i class="fas fa-angle-up"></i>
                 <i class="fas fa-angle-down"></i>
@@ -70,9 +70,9 @@
             </div>
           </div>
           <div class="modal__timer">
-            <h5>long break</h5>
+            <label for="long__break">long break</label>
             <div class="timer">
-              <h4>15</h4>
+              <input type="text" placeholder="15" id="long__break" value="15" />
               <div class="adjust">
                 <i class="fas fa-angle-up"></i>
                 <i class="fas fa-angle-down"></i>
@@ -80,22 +80,22 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
       <!-- modal font -->
       <div class="modal__font__color" id="font__container">
         <h2>Font</h2>
         <div class="font">
-          <div>Aa</div>
-          <div>Aa</div>
-          <div>Aa</div>
+          <div id="kumbh">Aa</div>
+          <div id="roboto-slab">Aa</div>
+          <div dir="space-mono">Aa</div>
         </div>
       </div>
       <!-- modal color  -->
       <div class="modal__font__color" id="color__container">
         <h2>Color</h2>
         <div class="color">
-          <div id="red"><i class="fas fa-check"></i></div>
-          <div id="blue"></div>
+          <div id="orange"><i class="fas fa-check"></i></div>
+          <div id="cyan"></div>
           <div id="purple"></div>
         </div>
       </div>

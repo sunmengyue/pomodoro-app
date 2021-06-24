@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Roboto+Slab:wght@200;300;400;700&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
   --orange: #f87070;
@@ -24,7 +22,7 @@ body {
   width: 100%;
   background-color: var(--dark-blue);
   color: #f0f0f0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 .container {
@@ -132,6 +130,10 @@ nav > div:hover {
   color: var(--beige);
 }
 
+.settings > i:hover {
+  cursor: pointer;
+}
+
 .active {
   background: var(--orange);
   color: var(--dark-blue);
@@ -160,6 +162,10 @@ nav > div:hover {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px 30px;
+}
+
+#close:hover {
+  cursor: pointer;
 }
 
 .modal__time {
@@ -191,9 +197,11 @@ nav > div:hover {
   min-width: 100px;
 }
 
-.modal__timer h5 {
-  color: #a8a8a8;
+.modal__timer > label {
+  color: #a0a0a0;
   font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .modal__timer > .timer {
@@ -208,8 +216,15 @@ nav > div:hover {
   font-size: 1.5rem;
 }
 
-.timer > h4 {
+.timer > input {
   font-size: 1.1rem;
+  border: none;
+  width: 70%;
+  background-color: transparent;
+}
+
+.timer > input:focus {
+  outline: none;
 }
 
 .adjust {
@@ -241,6 +256,7 @@ nav > div:hover {
 
 .modal__font__color .font {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -275,6 +291,7 @@ nav > div:hover {
 .modal__font__color .color {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .color > div {

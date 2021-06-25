@@ -135,7 +135,7 @@ nav > div:hover {
 }
 
 .active {
-  background: var(--orange);
+  background-color: var(--orange);
   color: var(--dark-blue);
 }
 
@@ -306,16 +306,23 @@ nav > div:hover {
   border: none;
 }
 
+.color > button > i {
+  opacity: 0;
+}
+
 .color > button:nth-of-type(1) {
   background-color: var(--orange);
 }
+
 .color > button:nth-of-type(2) {
   background-color: var(--cyan);
-  padding: 19px;
 }
 .color > button:nth-of-type(3) {
   background-color: var(--purple);
-  padding: 19px;
+}
+
+.color-active > .fas {
+  opacity: 1;
 }
 
 #apply {

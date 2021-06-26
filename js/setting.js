@@ -5,23 +5,31 @@ const downArrows = document.querySelectorAll('.fa-angle-down');
 const timeInputs = document.querySelectorAll(
   '#pomodoro, #short__break, #long__break',
 );
-
 const fontBtns = document.querySelectorAll('.font > button');
 const colorBtns = document.querySelectorAll('.color > button');
 const container = document.querySelector('.container');
 const gear = document.querySelector('.settings');
 const apply = document.querySelector('#apply');
 
-// open modal
-gear.addEventListener('click', (e) => {
+// helper function
+const closeModal = () => {
+  modal.classList.add('hide');
+  container.classList.remove('hide');
+};
+
+const openModal = () => {
   modal.classList.remove('hide');
   container.classList.add('hide');
+};
+
+// open modal
+gear.addEventListener('click', (e) => {
+  openModal();
 });
 
 // close modal
 close.addEventListener('click', (e) => {
-  modal.classList.add('hide');
-  container.classList.remove('hide');
+  closeModal();
 });
 
 /* Change Settings -- Modal Theme */
@@ -99,3 +107,11 @@ function toggleActiveColorBtn(target) {
 }
 
 /* Change Settings -- Clock Theme */
+apply.addEventListener('click', () => {
+  timer.reset();
+  closeModal();
+  // change clock font theme
+  container.style.fontFamily = modal.style.fontFamily;
+  // change clock color theme
+  // change clock time
+});

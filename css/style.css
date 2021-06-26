@@ -265,27 +265,32 @@ nav > div:hover {
 }
 
 .font > button {
+  background-color: var(--beige);
+  color: #a8a8a8;
+  font-weight: 700;
   margin-right: 20px;
   border-radius: 50%;
   padding: 10px;
   border: none;
+  transition: all 0.3s ease;
 }
 
-.font > button:nth-of-type(1) {
-  background-color: black;
-  font-weight: 700;
-  color: var(--beige);
+.font > button:hover {
+  border: 2.5px solid #fff;
+  box-shadow: 0 0 1px #888;
 }
+
 .font > button:nth-of-type(2) {
-  background-color: var(--beige);
-  color: #a8a8a8;
-  font-weight: 700;
   font-family: 'Roboto Slab', serif;
 }
 .font > button:nth-of-type(3) {
-  background-color: var(--beige);
-  color: #a0a0a0;
+  font-family: 'Space Mono', serif;
   font-weight: 700;
+}
+
+.font > button.font-active {
+  background-color: var(--dark-blue);
+  color: #fff;
 }
 
 #color__container {
@@ -304,6 +309,12 @@ nav > div:hover {
   border-radius: 50%;
   padding: 11px;
   border: none;
+  transition: all 0.2s ease;
+}
+
+.color > button:hover {
+  border: 2.5px solid #fff;
+  box-shadow: 0 0 2px #888;
 }
 
 .color > button > i {

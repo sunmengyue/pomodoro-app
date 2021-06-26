@@ -5,6 +5,7 @@ const downArrows = document.querySelectorAll('.fa-angle-down');
 const timeInputs = document.querySelectorAll(
   '#pomodoro, #short__break, #long__break',
 );
+
 const fontBtns = document.querySelectorAll('.font > button');
 const colorBtns = document.querySelectorAll('.color > button');
 const container = document.querySelector('.container');
@@ -24,6 +25,18 @@ close.addEventListener('click', (e) => {
 });
 
 /* Change Settings -- Modal Theme */
+fontBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    toggleActiveBtns(e.currentTarget);
+  });
+});
+// helper function
+function toggleActiveBtns(target) {
+  fontBtns.forEach((btn) => {
+    btn.classList.remove('font-active');
+  });
+  target.classList.add('font-active');
+}
 
 // adjust time
 upArrows.forEach((arrow) => {
@@ -47,6 +60,17 @@ downArrows.forEach((arrow) => {
 });
 
 // adjust font
+fontBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    if (e.currentTarget.classList.contains('roboto-slab')) {
+      modal.style.fontFamily = "'Roboto Slab', serif";
+    } else if (e.currentTarget.classList.contains('space-mono')) {
+      modal.style.fontFamily = "'Space Mono', serif";
+    } else {
+      modal.style.fontFamily = "'Kumbh Sans', sans-serif";
+    }
+  });
+});
 
 // adjust color
 colorBtns.forEach((btn) =>

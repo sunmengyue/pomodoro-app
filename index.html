@@ -18,9 +18,11 @@
     <div class="container hide">
       <h2 class="title">Pomodoro</h2>
       <nav>
-        <div class="active" onclick="timer.select('pomodoro')">pomodoro</div>
-        <div onclick="timer.select('shortBreak')">short break</div>
-        <div onclick="timer.select('longBreak')">long break</div>
+        <div class="active" onclick="timer.select('pomodoro')" id="first">
+          pomodoro
+        </div>
+        <div onclick="timer.select('shortBreak')" id="second">short break</div>
+        <div onclick="timer.select('longBreak')" id="third">long break</div>
       </nav>
       <div class="clock">
         <div class="outer_circle">

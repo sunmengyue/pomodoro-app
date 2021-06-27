@@ -7,6 +7,7 @@ class Timer {
     this.time = document.getElementById('time');
     this.action = document.getElementById('control');
     this.circle = document.getElementById('circle');
+    this.indicators = document.querySelectorAll('nav div');
   }
 
   select(type) {
@@ -34,7 +35,7 @@ class Timer {
 
       if (overallSeconds <= 0) {
         clearInterval(this.interval);
-        this.action.innerText = 'reset'.toUpperCase();
+        this.action.innerText = 'stop'.toUpperCase();
       }
     }, 1000);
   }

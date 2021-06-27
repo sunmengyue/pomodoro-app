@@ -49,7 +49,6 @@ function toggleActiveBtns(target) {
 // adjust time
 upArrows.forEach((arrow) => {
   arrow.addEventListener('click', (e) => {
-    console.log(timeInputs);
     timeInputs.forEach((input) => {
       if (e.currentTarget.classList.contains(input.id)) {
         input.value++;
@@ -113,9 +112,11 @@ apply.addEventListener('click', () => {
   closeModal();
   // change clock font theme
   container.style.fontFamily = modal.style.fontFamily;
-  // change clock color theme
+  // change clock time
   timer.pomodoro = timeInputs[0].value;
   timer.shortBreak = timeInputs[1].value;
   timer.longBreak = timeInputs[2].value;
-  // change clock time
+  // change clock color
+  timer.circle.style.stroke = apply.style.backgroundColor;
+  toggleThemeColor(apply.style.backgroundColor);
 });

@@ -1,5 +1,6 @@
 let timer = new Timer();
 timer.reset();
+const navLinks = document.querySelectorAll('nav div');
 
 const control = (action) => {
   switch (action.toLowerCase()) {
@@ -12,15 +13,21 @@ const control = (action) => {
   }
 };
 
-const navLinks = document.querySelectorAll('nav div');
-for (let link of navLinks) {
-  link.addEventListener('click', (e) => {
-    toggleActiveLink(e.currentTarget);
+const toggleThemeColor = (colorSet) => {
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      toggleActiveLinks(e.currentTarget);
+      console.log(e.currentTarget.backgroundColor);
+      console.log(getComputedStyle(e.currentTarget).backgroundColor);
+    });
   });
-}
-function toggleActiveLink(targetLink) {
-  for (let link of navLinks) {
-    link.classList.remove('active');
+
+  function toggleActiveLinks(target) {
+    navLinks.forEach((item) => {
+      item.classList.remove('active');
+    });
+    target.classList.add('active');
+    target.backgroundColor = colorSet;
+    // console.log(target.backgroundColor);
   }
-  targetLink.classList.add('active');
-}
+};
